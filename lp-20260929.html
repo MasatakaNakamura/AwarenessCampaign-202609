@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>その9秒は、どこで止められたか ― 第一システム事業部 啓蒙活動</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dark:#3B2A20; --dark2:#2B211A;
+  --brown:#6B4A34; --gold:#C9A876; --goldDeep:#8C6A32;
+  --cream:#F4EEE3; --cream2:#FAF7F2;
+  --ink:#2B211A; --inkSoft:#4A3C31; --inkFaint:#6B5C4E;
+  --border:#E8E0D5;
+  --sans:'Noto Sans JP',system-ui,sans-serif;
+  --serif:'Noto Serif JP',serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--sans);line-height:1.85;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px}
+
+/* hero */
+.hero{background:var(--dark);color:#fff;padding:70px 0 62px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-60px;top:40px;width:280px;height:280px;
+  border-radius:50%;background:var(--brown);opacity:.55}
+.hero::before{content:'';position:absolute;right:10px;top:110px;width:140px;height:140px;
+  border-radius:50%;background:var(--gold);opacity:.5;z-index:1}
+.hero .wrap{position:relative;z-index:2}
+.kicker{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.14em;
+  color:var(--gold);margin:0 0 18px}
+h1{font-family:var(--serif);font-size:44px;line-height:1.32;margin:0;font-weight:700;
+  letter-spacing:.01em}
+.lead{font-family:var(--serif);font-size:21px;color:var(--gold);margin:18px 0 0;font-weight:600}
+.rule{width:88px;height:3px;background:var(--gold);border-radius:2px;margin:26px 0 0}
+.tag{font-size:15px;color:#E9E0D2;margin:22px 0 0;max-width:620px}
+
+/* 開催情報 */
+.meta{background:var(--cream);padding:34px 0}
+.metabox{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
+.mi .l{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.1em;
+  color:var(--goldDeep);display:block;margin-bottom:5px}
+.mi .v{font-size:18px;font-weight:700;color:var(--ink);line-height:1.5;display:block}
+.mi .s{font-size:13px;color:var(--inkFaint);display:block;margin-top:3px}
+.cta{margin-top:26px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--dark);color:#fff;text-decoration:none;
+  font-weight:700;font-size:16px;padding:15px 30px;border-radius:9px;transition:.15s}
+.btn:hover{background:var(--brown)}
+.linktext{font-family:var(--mono);font-size:13px;color:var(--inkFaint);word-break:break-all}
+
+/* section */
+section{padding:48px 0}
+h2{font-family:var(--serif);font-size:26px;margin:0 0 8px;font-weight:700}
+.sublead{font-size:15px;color:var(--inkFaint);margin:0 0 26px}
+
+.agenda{display:flex;flex-direction:column;gap:10px}
+.row{display:grid;grid-template-columns:56px 1fr;gap:18px;align-items:baseline;
+  background:var(--cream2);border:1px solid var(--border);border-radius:10px;padding:16px 20px}
+.row .n{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--gold)}
+.row b{font-size:16.5px;display:block;margin-bottom:3px}
+.row span{font-size:13.5px;color:var(--inkFaint)}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{border:1px solid var(--border);border-radius:12px;padding:22px 24px;background:#fff}
+.card.on{background:var(--cream);border-color:var(--gold)}
+.card h3{font-size:17px;margin:0 0 10px;font-weight:700}
+.card ul{margin:0;padding-left:18px;font-size:14.5px;color:var(--inkSoft)}
+.card li{margin-bottom:6px}
+.card li:last-child{margin-bottom:0}
+
+.note{background:var(--dark2);color:#F4EEE3;border-radius:12px;padding:28px 30px;margin-top:8px}
+.note p{margin:0;font-size:17px;line-height:1.9}
+.note strong{color:var(--gold)}
+
+.take{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:6px}
+.tk{border-left:3px solid var(--gold);padding:4px 0 4px 16px}
+.tk b{display:block;font-size:16px;margin-bottom:4px}
+.tk span{font-size:14px;color:var(--inkFaint)}
+
+footer{background:var(--cream);padding:34px 0;margin-top:20px}
+footer .f{font-size:14px;color:var(--inkFaint);line-height:1.9}
+footer .f b{color:var(--ink)}
+
+@media (max-width:680px){
+  h1{font-size:30px}
+  .lead{font-size:17px}
+  .hero{padding:48px 0 44px}
+  .hero::after{width:150px;height:150px;right:-55px;top:-30px}
+  .hero::before{width:74px;height:74px;top:6px;right:-6px}
+  .two{grid-template-columns:1fr}
+  .row{grid-template-columns:40px 1fr;gap:12px;padding:14px 16px}
+  section{padding:36px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <p class="kicker">第一システム事業部 啓蒙活動</p>
+    <h1>その9秒は、<br>どこで止められたか</h1>
+    <p class="lead">AIエージェントの事故に学ぶ、ハーネス設計</p>
+    <div class="rule"></div>
+    <p class="tag">実際に起きた2件の事故を順に追いながら、どこに設定を置いておけば止まったのかを考えます。前回「コンテキストの先へ ― ハーネスエンジニアリングの本質」の続編です。</p>
+  </div>
+</div>
+
+<div class="meta">
+  <div class="wrap">
+    <div class="metabox">
+      <div class="mi">
+        <span class="l">日時</span>
+        <span class="v">9月29日（火）19:30 〜 20:30</span>
+        <span class="s">Asia/Tokyo　60分</span>
+      </div>
+      <div class="mi">
+        <span class="l">形式</span>
+        <span class="v">オンライン（Google Meet）</span>
+        <span class="s">カメラ・マイクはオフのままで構いません</span>
+      </div>
+      <div class="mi">
+        <span class="l">対象</span>
+        <span class="v">銀河ソフトウェア 全社員</span>
+        <span class="s">前回に出ていない方も参加できます</span>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn" href="https://meet.google.com/ott-kdmd-yeh">Google Meet で参加する</a>
+      <span class="linktext">https://meet.google.com/ott-kdmd-yeh</span>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>当日の内容</h2>
+    <p class="sublead">60分。事故2件の読み解きに、半分以上を使います。</p>
+    <div class="agenda">
+      <div class="row"><span class="n">01</span><div><b>前提の共有</b><span>ハーネスとは何か。前回の5つの層をおさらいします</span></div></div>
+      <div class="row"><span class="n">02</span><div><b>事例① 本番データベースの削除</b><span>9秒で消えた。どこで止められたかを順に見ます</span></div></div>
+      <div class="row"><span class="n">03</span><div><b>事例② 偽のMCPサーバ</b><span>入れた時点では安全だった。あとから別物に変わります</span></div></div>
+      <div class="row"><span class="n">04</span><div><b>2件に共通していること</b><span>書いた禁止事項は、どちらも効きませんでした</span></div></div>
+      <div class="row"><span class="n">05</span><div><b>明日からできること</b><span>使っている人／今は使っていない人、それぞれの持ち帰り</span></div></div>
+      <div class="row"><span class="n">06</span><div><b>チェックリストの案内</b><span>27項目のうち、まず4つ</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>こんな方に</h2>
+    <p class="sublead">どちらの立場でも持ち帰れる内容にしています。</p>
+    <div class="two">
+      <div class="card on">
+        <h3>すでにAIを使って開発している方</h3>
+        <ul>
+          <li>自分の設定のどこが危ないかが分かります</li>
+          <li>権限・トークン・不可逆な操作の扱いを見直せます</li>
+          <li>判定欄つきのチェックリストをお渡しします</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>まだ使っていない／客先で使えない方</h3>
+        <ul>
+          <li>専門用語は使いません。予備知識も要りません</li>
+          <li>自分の案件で何が許可されているかを考える時間になります</li>
+          <li>いざ使えるようになったときに、最初に見る場所が分かります</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="note">
+      <p>この回の主題は、AIが危険だという話ではありません。<br>
+      <strong>お願いしていることは、いつか破られます。</strong>機構として置いたものだけが、実際に止めます。</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:16px">
+  <div class="wrap">
+    <h2>お持ち帰りいただくもの</h2>
+    <div class="take">
+      <div class="tk"><b>チェックリスト</b><span>AIハーネス設計の観点27項目。各項目に達成の判定条件と判定欄つき</span></div>
+      <div class="tk"><b>馬具から見る27項目</b><span>前回の5つの層と、27項目の対応表</span></div>
+      <div class="tk"><b>当日のスライド</b><span>事例の時系列と出典を含みます</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="f">
+      <b>第一システム事業部 啓蒙活動</b>　その9秒は、どこで止められたか<br>
+      2026年9月29日（火）19:30〜20:30 ／ Google Meet　https://meet.google.com/ott-kdmd-yeh<br>
+      録画の有無、資料の配布方法は当日ご案内します。ご質問は事業部までお寄せください。
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
